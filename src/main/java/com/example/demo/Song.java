@@ -1,5 +1,4 @@
 package com.example.demo;
-
 import javax.persistence.*;
 
 @Entity
@@ -16,43 +15,23 @@ public class Song {
     @JoinColumn(name = "album_id")
     private Album album;
 
-    public long getId() {
-        return id;
-    }
+    public long getId() { return id; }
 
-    public void setId(long id) {
-        this.id = id;
-    }
+    public void setId(long id) { this.id = id; }
 
-    public String getTitle() {
-        return title;
-    }
+    public String getTitle() { return title; }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public void setTitle(String title) { this.title = title; }
 
-    public long getYear() {
-        return year;
-    }
+    public long getYear() { return year; }
 
-    public void setYear(long year) {
-        this.year = year;
-    }
+    public void setYear(long year) { this.year = year; }
 
-    public String getDescription() {
-        return description;
-    }
+    public String getDescription() { return description; }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    public void setDescription(String description) { this.description = description; }
 
-    public Album getAlbum() {
-        return album;
-    }
+    public Album getAlbum() { return album; }
 
-    public void setAlbum(Album album) {
-        this.album = album;
-    }
+    public void setAlbum(Album album) { this.album = album; }
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<tr>
+    <table class="table table-striped">
+        <tr>
+            <th scope="col">Song Title</th>
+            <th scope="col">Year Released</th>
+            <th scope="col">Description</th>
+            <th scope="col">Actions</th>
+        </tr>
+        <tr th:each="song : ${songs}">
+            <td th:text="${song.title}"></td>
+            <td th:text="${song.year}"></td>
+            <td th:text="${song.description}"></td>
+            <td>
+                <a th:href="@{/albumupdate/{id}(id=${album.id})}">Update</a> -
+                <a th:href="@{/albumdetails/{id}(id=${album.id})}">Details</a> -
+                <a th:href="@{/albumdelete/{id}(id=${album.id})}">Delete</a>
+            </td>
+        </tr>
+    </table>
+
+    </table>
+</body>
+</html>

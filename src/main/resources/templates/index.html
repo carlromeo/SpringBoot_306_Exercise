@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Homw</h1>
+
+<a type="button" class="btn btn-secondary btn-lg"  href="/addSong" role="button">Add a new Song</a>
+<a type="button" class="btn btn-secondary btn-lg"  href="/addAlbum" role="button">Add a new Album</a>
+<a type="button" class="btn btn-secondary btn-lg"  href="/songlist" role="button">Add a new Album</a>
+<a type="button" class="btn btn-secondary btn-lg"  href="/albumlist" role="button">Add a new Album</a>
+<div th:each="album : ${albums}">
+    <h2 th:text="${album.name}"></h2>
+    <h6 th:inline="text">Genre: [[${album.genre}]]</h6>
+
+    <ul>
+        <th:block th:each="song : ${album.songs}">
+            <br th:inline="text"><b> [[${song.title}]]</b> released in
+                [[${song.year}]].<br><i> [[${song.description}]]</i></br></li>
+        </th:block>
+    </ul>
+</div>
+</body>
+</html>

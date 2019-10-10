@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/processAlbum}" th:object="${album}" method="post">
+Album name : <input class="form-control" type="text" th:field="*{name}" />
+<span th:if="${#fields.hasErrors('name')}"
+      th:errors="*{name}"></span><br/>
+
+
+Genre : <input class="form-control" type="text" th:field="*{genre}" />
+<span th:if="${#fields.hasErrors('genre')}"
+      th:errors="*{genre}"></span><br/>
+
+
+</div>
+<input name="submit" id="submit" type="submit" tabindex="5" value="Submit Form" class="Cbutton">
+</form>
+</body>
+</html>
